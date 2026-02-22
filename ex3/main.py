@@ -7,9 +7,12 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 16:23:20 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 17:02:51 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 17:06:16 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
+
+from ex3.GameEngine import GameEngine, AgressiveStrategy, FantasyCardFactory
+
 
 if __name__ == "__main__":
     print("\n" + " DataDeck Game Engine ".center(79, "="))
@@ -19,5 +22,9 @@ if __name__ == "__main__":
 # =============================================================================
 
     print("\n" + "Configuring Fantasy Card Game...")
-    print("Factory: FantasyCardFactory" + "\n",
-          "Strategy: AggressiveStrategy")
+
+    game = GameEngine()
+    game.configure_engine(AgressiveStrategy, FantasyCardFactory)
+
+    print("Factory: FantasyCardFactory")
+    print("Strategy: AggressiveStrategy")
