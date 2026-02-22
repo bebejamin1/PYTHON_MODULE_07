@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 11:33:05 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 13:08:43 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 13:31:27 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # ============================ DATA =======================================
     # =========================================================================
 
-    print(" DataDeck Deck Builder ".center(79, "="))
+    print("\n" + " DataDeck Deck Builder ".center(79, "="))
 
     deck = Deck()
 
@@ -43,7 +43,10 @@ if __name__ == "__main__":
     # =========================================================================
 
     print("\n" + "Building deck with different card types...")
-    print("Deck stats:", deck.get_deck_stats())
+    res = deck.get_deck_stats()
+    print(f"Deck stats: {{'total_cards': '{res['total_cards']}', "
+          f"'creatures': '{res['creatures']}', 'spells': '{res['spells']}'\n"
+          f"'artifacts': '{'artifacts'}', 'avg_cost': {'avg_cost'}}}")
 
     # =========================================================================
     # ========================== DRAWING ======================================
@@ -55,6 +58,9 @@ if __name__ == "__main__":
 
     for card in card_list:
         print(f"Drew: {card.name} ({type(card).__name__})")
-        print("Play result:", card.play(game_state), "\n")
+        res = card.play(game_state)
+        print(f"Play result: {{'card_played': '{res['card_played']}', "
+              f"'mana_used': {res['mana_used']},\n"
+              f"'effect': '{res['effect']}'}}" + "\n")
 
     print("Polymorphism in action: Same interface, different card behaviors!")
