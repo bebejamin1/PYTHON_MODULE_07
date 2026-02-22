@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 11:32:37 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 13:06:16 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 16:14:41 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -30,4 +30,4 @@ class ArtifactCard:
         return (game_state)
 
     def activate_ability(self) -> Dict:
-        pass
+        return {f"{self.effect}": self}

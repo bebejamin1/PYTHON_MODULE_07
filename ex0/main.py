@@ -7,12 +7,12 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 10:10:48 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 11:30:56 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 16:19:15 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 
-from ex0 import CreatureCard
+from ex0 import CreatureCard, Rarity
 
 if __name__ == "__main__":
     stamina = 6
@@ -21,8 +21,8 @@ if __name__ == "__main__":
     print("\n" + " DataDeck Card Foundation ".center(79, "="))
 
     print("\n" + "Testing Abstract Base Class Design:")
-    creature = CreatureCard("Fire Dragon", 5, "Legendary", 7, 5)
-    target = CreatureCard("Goblin Warrior", 3, "rare", 7, 2)
+    creature = CreatureCard("Fire Dragon", 5, Rarity.LEGENDARY.value, 7, 5)
+    target = CreatureCard("Goblin Warrior", 3, Rarity.COMMON.value, 7, 2)
 
 # =============================================================================
 # ======================== CreatureCard Info: =================================

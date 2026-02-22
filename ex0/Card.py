@@ -7,13 +7,21 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 10:11:28 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 11:23:50 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 16:17:26 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 
 from abc import ABC, abstractmethod
 from typing import Dict
+from enum import Enum
+
+
+class Rarity(Enum):
+    COMMON = "Common"
+    RARE = "Rare"
+    EPIC = "Epic"
+    LEGENDARY = "Legendary"
 
 
 class Card(ABC):
@@ -29,7 +37,7 @@ class Card(ABC):
 
     def get_card_info(self) -> Dict:
         info = {}
-        info["name"] = self.name,
+        info["name"] = self.name
         info["cost"] = self.cost
         info["rarity"] = self.rarity
         return (info)
