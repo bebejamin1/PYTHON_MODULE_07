@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 16:23:08 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 17:16:11 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 17:28:52 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -26,12 +26,7 @@ data = [
 class GameEngine():
     def __init__(self) -> None:
         self.factory = None
-        self.strategy = "No strategy used"
-        self.turn = 0
-        self.cards_created = 0
-        self.total_damage = 0
-        self.hand1 = []
-        self.hand2 = []
+        self.strategy = None
 
     def configure_engine(self,
                          factory: CardFactory, strategy: GameStrategy) -> None:

@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 16:23:20 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 17:06:16 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 17:29:50 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -24,7 +24,6 @@ if __name__ == "__main__":
     print("\n" + "Configuring Fantasy Card Game...")
 
     game = GameEngine()
-    game.configure_engine(AgressiveStrategy, FantasyCardFactory)
 
     print("Factory: FantasyCardFactory")
     print("Strategy: AggressiveStrategy")
