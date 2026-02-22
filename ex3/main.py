@@ -7,11 +7,11 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 16:23:20 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 17:29:50 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/22 17:30:00 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-from ex3.GameEngine import GameEngine, AgressiveStrategy, FantasyCardFactory
+from ex3.GameEngine import GameEngine
 
 
 if __name__ == "__main__":
