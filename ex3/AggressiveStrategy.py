@@ -12,7 +12,7 @@
 # ########################################################################### #
 
 from typing import Dict, List
-from ex3 import GameStrategy
+from ex3.GameStrategy import GameStrategy
 # from ex0 import Card
 
 

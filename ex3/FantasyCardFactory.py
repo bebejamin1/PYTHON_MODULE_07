@@ -11,7 +11,7 @@
 #                                                                             #
 # ########################################################################### #
 
-from ex3 import CardFactory
+from ex3.CardFactory import CardFactory
 
 
 class FantasyCardFactory(CardFactory):

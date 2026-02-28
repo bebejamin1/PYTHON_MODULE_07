@@ -7,12 +7,12 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 10:10:48 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 16:19:15 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/28 12:24:33 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-
-from ex0 import CreatureCard, Rarity
+from ex0.CreatureCard import CreatureCard
+from ex0.Card import Rarity
 
 if __name__ == "__main__":
     stamina = 6

@@ -13,7 +13,7 @@
 
 from ex3.CardFactory import CardFactory
 from ex3.GameStrategy import GameStrategy
-from ex0 import CreatureCard, Rarity
+from ex0.CreatureCard import CreatureCard, Rarity
 from typing import Dict
 
 data = [

@@ -7,11 +7,11 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 0002/10/03 00:00:00 by          #+         #+#    #+#            #
-#   Updated: 2026/02/22 11:24:22 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/02/28 09:58:11 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
-from ex0 import Card
+from ex0.Card import Card
 from typing import Dict
 
 

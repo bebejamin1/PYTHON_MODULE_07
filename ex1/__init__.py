@@ -11,9 +11,4 @@
 #                                                                             #
 # ########################################################################### #
 
-from ex0.CreatureCard import CreatureCard
-from ex1 import ArtifactCard, SpellCard, Deck
-
-__all__ = [
-    ArtifactCard, SpellCard, Deck, CreatureCard
-    ]
+# NOTHING TO SEE HERE!
