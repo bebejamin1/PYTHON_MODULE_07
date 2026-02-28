@@ -30,6 +30,23 @@ if __name__ == "__main__":
 
     game.configure_engine(factory, strategy)
 
-    print("Factory:", FantasyCardFactory.__name__)
-    print("Strategy:", AggressiveStrategy.__name__)
-    print("Available types:", game)
+    try:
+        creature1 = factory.create_creature("dragon")
+        creature2 = factory.create_creature("goblin")
+        spell1 = factory.create_spell("fireball")
+        artifact1 = factory.create_artifact("mana_ring")
+        print(f"Available types: {factory.get_supported_types()}")
+        creature3 = factory.create_creature("lightning bolt")
+    except KeyError as e:
+        print("Error: ", e)
+
+    print("\n" + "Simulating aggressive turn...")
+    creatures = [creature1, creature2, creature3]
+    hand = []
+    for creature in creatures:
+        hand.append(f"{creature.name} ({creature.cost})")
+    print("Hand:", end=" ")
+    print(*hand, sep=", ")
+
+    print("\n" + "Turn execution:" + "\n")
+    # print("Strategy:", creature2.get_strategy_name())

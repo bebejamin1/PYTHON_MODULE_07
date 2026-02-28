@@ -11,37 +11,31 @@
 #                                                                             #
 # ########################################################################### #
 
+from typing import Dict
 from ex3.CardFactory import CardFactory
 from ex3.GameStrategy import GameStrategy
-from ex0.CreatureCard import CreatureCard
-from ex0.Card import Rarity
-from typing import Dict
-
-# FantasyCardFactory
-data = [
-        CreatureCard("dragon", 5, Rarity.LEGENDARY.value, 7, 6),
-        CreatureCard("goblin", 2, Rarity.COMMON.value, 3, 5),
-        CreatureCard("Lightning Bolt", 3, Rarity.LEGENDARY.value, 5, 5)
-       ]
+# from ex0.CreatureCard import CreatureCard
+# from ex0.Card import Rarity
 
 
 class GameEngine():
     def __init__(self) -> None:
-        self.turn = 0
         self.factory = None
         self.strategy = None
+        self.turn = 0
+        self.total_damage = 0
+        self.cards_created = 0
 
     def configure_engine(self,
                          factory: CardFactory, strategy: GameStrategy) -> None:
         self.factory = factory
         self.strategy = strategy
-        print("Factory:", factory)
-        print("Stategy:", strategy)
+        print(f"Factory: {self.factory.__class__.__name__}")
+        print("Stategy:", self.strategy.__class__.__name__)
 
     def simulate_turn(self) -> Dict:
         self.turn += 1
         pass
 
     def get_engine_status(self) -> Dict:
-        return {"turns_simulated": self.turn, "strategy_used": self.strategy,
-                }
+        return {"turns_simulated": self.turn, "strategy_used": self.strategy}

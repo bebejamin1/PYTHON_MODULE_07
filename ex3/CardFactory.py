@@ -17,10 +17,6 @@ from typing import Dict
 
 
 class CardFactory(ABC):
-    def __init__(self, name: str, spells: str, artifact: str):
-        self.name = name
-        self.spells = spells
-        self.artifact = artifact
 
     @abstractmethod
     def create_creature(self, name_or_power: str | int | None = None) -> Card:

@@ -21,7 +21,7 @@ class AggressiveStrategy(GameStrategy):
         pass
 
     def get_strategy_name(self) -> str:
-        pass
+        return ("AggressiveStrategy")
 
     def prioritize_targets(self, available_targets: List) -> List:
         pass
