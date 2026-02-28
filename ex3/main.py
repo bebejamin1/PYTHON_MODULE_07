@@ -12,7 +12,8 @@
 # ########################################################################### #
 
 from ex3.GameEngine import GameEngine
-
+from ex3.FantasyCardFactory import FantasyCardFactory
+from ex3.AggressiveStrategy import AggressiveStrategy
 
 if __name__ == "__main__":
     print("\n" + " DataDeck Game Engine ".center(79, "="))
@@ -25,5 +26,6 @@ if __name__ == "__main__":
 
     game = GameEngine()
 
-    print("Factory: FantasyCardFactory")
-    print("Strategy: AggressiveStrategy")
+    print("Factory:", FantasyCardFactory.__name__)
+    print("Strategy:", AggressiveStrategy.__name__)
+    print("Available types:", game)

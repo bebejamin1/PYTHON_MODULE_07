@@ -13,12 +13,14 @@
 
 from ex3.CardFactory import CardFactory
 from ex3.GameStrategy import GameStrategy
-from ex0.CreatureCard import CreatureCard, Rarity
+from ex0.CreatureCard import CreatureCard
+from ex0.Card import Rarity
 from typing import Dict
 
+# FantasyCardFactory
 data = [
-        CreatureCard("Dragon", 5, Rarity.LEGENDARY.value, 7, 6),
-        CreatureCard("Goblin", 2, Rarity.COMMON.value, 3, 5),
+        CreatureCard("dragon", 5, Rarity.LEGENDARY.value, 7, 6),
+        CreatureCard("goblin", 2, Rarity.COMMON.value, 3, 5),
         CreatureCard("Lightning Bolt", 3, Rarity.LEGENDARY.value, 5, 5)
        ]
 

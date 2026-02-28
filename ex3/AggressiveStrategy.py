@@ -13,7 +13,6 @@
 
 from typing import Dict, List
 from ex3.GameStrategy import GameStrategy
-# from ex0 import Card
 
 
 class AggressiveStrategy(GameStrategy):
