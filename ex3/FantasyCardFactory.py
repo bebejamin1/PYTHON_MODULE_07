@@ -16,7 +16,11 @@ from typing import Dict
 from ex0.Card import Card
 
 
+
+
 class FantasyCardFactory(CardFactory):
+    def __init__(self, name: str, spells: str, artifact: str):
+        super().__init__(name, spells, artifact)
 
     def create_creature(self, name_or_power: str | int | None = None) -> Card:
         pass
@@ -31,4 +35,4 @@ class FantasyCardFactory(CardFactory):
         pass
 
     def get_supported_types(self) -> Dict:
-        pass
+        return {}

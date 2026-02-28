@@ -27,6 +27,7 @@ data = [
 
 class GameEngine():
     def __init__(self) -> None:
+        self.turn = 0
         self.factory = None
         self.strategy = None
 
@@ -34,9 +35,13 @@ class GameEngine():
                          factory: CardFactory, strategy: GameStrategy) -> None:
         self.factory = factory
         self.strategy = strategy
+        print("Factory:", factory)
+        print("Stategy:", strategy)
 
     def simulate_turn(self) -> Dict:
+        self.turn += 1
         pass
 
     def get_engine_status(self) -> Dict:
-        pass
+        return {"turns_simulated": self.turn, "strategy_used": self.strategy,
+                }

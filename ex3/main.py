@@ -24,7 +24,11 @@ if __name__ == "__main__":
 
     print("\n" + "Configuring Fantasy Card Game...")
 
+    factory = FantasyCardFactory()
+    strategy = AggressiveStrategy()
     game = GameEngine()
+
+    game.configure_engine(factory, strategy)
 
     print("Factory:", FantasyCardFactory.__name__)
     print("Strategy:", AggressiveStrategy.__name__)
