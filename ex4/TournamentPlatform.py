@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:51:03 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 18:27:17 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/01 18:29:31 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -74,8 +74,6 @@ class TournamentPlatform():
             result["loser_rating"] = card2.rating
             self.total_rating += card1.rating + card2.rating
 
-        print(card1.name, card1.get_combat_stats())
-        print(card2.name, card2.get_combat_stats())
         return (result)
 
     def get_leaderboard(self) -> List:
