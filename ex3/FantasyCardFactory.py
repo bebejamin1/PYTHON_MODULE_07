@@ -83,7 +83,12 @@ class FantasyCardFactory(CardFactory):
             return (artifact)
 
     def create_themed_deck(self, size: int) -> Dict:
-        pass
+        return {
+            "deck_name": "Fantasy Theme Deck",
+            "size": size,
+            "cards": self.creatures,
+            "status": "ready"
+                }
 
     def get_supported_types(self) -> Dict:
         return {"creatures": self.creatures, "spells": self.spells,

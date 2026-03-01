@@ -29,4 +29,5 @@ class AggressiveStrategy(GameStrategy):
         return (__class__.__name__)
 
     def prioritize_targets(self, available_targets: List) -> List:
-        return {available_targets[1]}
+        targets = [target for target in available_targets]
+        return (targets)

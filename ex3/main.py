@@ -41,10 +41,6 @@ def create_hand_turn(creatures: Dict) -> Dict:
 if __name__ == "__main__":
     print("\n" + " DataDeck Game Engine ".center(79, "=") + "\n")
 
-# =============================================================================
-# ================================ DATA =======================================
-# =============================================================================
-
     print("\n" + "Configuring Fantasy Card Game...")
 
     # For Configuring Fantasy Card Game
@@ -57,11 +53,12 @@ if __name__ == "__main__":
     # For Available types and Simulating aggressive turn
     creature1 = factory.create_creature("dragon")
     creature2 = factory.create_creature("goblin")
-    creature3 = factory.create_creature("lightning bolt")
-    creatures = [creature1, creature2, creature3]
-
     spell1 = factory.create_spell("fireball")
     artifact1 = factory.create_artifact("mana_ring")
+    print(f"Available types: {factory.get_supported_types()}")
+
+    creature3 = factory.create_creature("lightning bolt")
+    creatures = [creature1, creature2, creature3]
 
     # For Turn execution
     enemy = factory.create_creature("enemy")
@@ -69,12 +66,6 @@ if __name__ == "__main__":
     battlefield = [enemy]
     hand_turn = create_hand_turn(hand)
     battlefield_turn = create_hand_turn(battlefield)
-
-# =============================================================================
-# =============================== PRINT =======================================
-# =============================================================================
-
-    print(f"Available types: {factory.get_supported_types()}")
 
     print("\n" + "Simulating aggressive turn...")
     hand = create_hand(creatures)
@@ -91,7 +82,6 @@ if __name__ == "__main__":
     game.cards_created += len(creatures)
     game.total_damage += turn["damage_dealt"]
     print(game.get_engine_status())
-    strategy.prioritize_targets(enemy)
 
     print("\n" + "Abstract Factory + Strategy Pattern: "
                  "Maximum flexibility achieved!")
