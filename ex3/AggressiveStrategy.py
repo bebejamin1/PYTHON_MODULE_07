@@ -18,10 +18,15 @@ from ex3.GameStrategy import GameStrategy
 class AggressiveStrategy(GameStrategy):
 
     def execute_turn(self, hand: List, battlefield: List) -> Dict:
-        pass
+        turn = {}
+        turn["cards_played"] = [card.name for card in hand]
+        turn["mana_used"] = sum(card.cost for card in hand)
+        turn["targets_attacked"] = [enemy.name for enemy in battlefield]
+        turn["damage_dealt"] = sum(card.attack for card in hand)
+        return (turn)
 
     def get_strategy_name(self) -> str:
-        return ("AggressiveStrategy")
+        return (__class__.__name__)
 
     def prioritize_targets(self, available_targets: List) -> List:
-        pass
+        return {available_targets[1]}

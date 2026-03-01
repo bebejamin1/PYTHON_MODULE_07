@@ -14,8 +14,6 @@
 from typing import Dict
 from ex3.CardFactory import CardFactory
 from ex3.GameStrategy import GameStrategy
-# from ex0.CreatureCard import CreatureCard
-# from ex0.Card import Rarity
 
 
 class GameEngine():
@@ -35,7 +33,11 @@ class GameEngine():
 
     def simulate_turn(self) -> Dict:
         self.turn += 1
-        pass
+        return {"turns_played": 1}
 
     def get_engine_status(self) -> Dict:
-        return {"turns_simulated": self.turn, "strategy_used": self.strategy}
+        return {"turns_simulated": self.turn,
+                "strategy_used": self.strategy.get_strategy_name(),
+                "total_damage": self.total_damage,
+                "cards_created": self.cards_created
+                }
