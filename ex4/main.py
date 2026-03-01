@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:55:59 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 18:41:00 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/01 18:41:14 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -39,7 +39,7 @@ def main():
         print(f"{i}. {player}")
         i += 1
 
-    dragon.get_tournament_stats()
+    print(dragon.get_tournament_stats())
 
     print("\n" + "Platform Report:")
     print(tournament.generate_tournament_report())

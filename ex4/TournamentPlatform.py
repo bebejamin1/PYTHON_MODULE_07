@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:51:03 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 18:29:31 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/01 18:45:22 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -51,6 +51,8 @@ class TournamentPlatform():
         while (card1.health > 0 and card2.health > 0):
             card1.attack(card2)
             card2.defend(card1.damage)
+            card2.attack(card1)
+            card1.defend(card2.damage)
 
         if (card1.health <= 1):
             card2.update_wins(1)
