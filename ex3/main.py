@@ -38,9 +38,7 @@ def create_hand_turn(creatures: Dict) -> Dict:
     return (hand)
 
 
-if __name__ == "__main__":
-    print("\n" + " DataDeck Game Engine ".center(79, "=") + "\n")
-
+def main():
     print("\n" + "Configuring Fantasy Card Game...")
 
     # For Configuring Fantasy Card Game
@@ -52,8 +50,8 @@ if __name__ == "__main__":
 
     dragon = factory.create_creature("dragon")
     goblin = factory.create_creature("goblin")
-    spell1 = factory.create_spell("fireball")
-    artifact1 = factory.create_artifact("mana_ring")
+    _ = factory.create_spell("fireball")
+    _ = factory.create_artifact("mana_ring")
     print(f"Available types: {factory.get_supported_types()}")
     lightning_bolt = factory.create_creature("lightning bolt")
     enemy = factory.create_creature("enemy")
@@ -81,5 +79,9 @@ if __name__ == "__main__":
     print("\n" + "Game Report:")
     print(game.get_engine_status())
 
+
+if __name__ == "__main__":
+    print("\n" + " DataDeck Game Engine ".center(79, "=") + "\n")
+    main()
     print("\n" + "Abstract Factory + Strategy Pattern: "
                  "Maximum flexibility achieved!")
