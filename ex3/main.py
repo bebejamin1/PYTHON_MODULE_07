@@ -91,6 +91,7 @@ if __name__ == "__main__":
     game.cards_created += len(creatures)
     game.total_damage += turn["damage_dealt"]
     print(game.get_engine_status())
+    strategy.prioritize_targets(enemy)
 
     print("\n" + "Abstract Factory + Strategy Pattern: "
                  "Maximum flexibility achieved!")
