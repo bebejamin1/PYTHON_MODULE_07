@@ -50,37 +50,35 @@ if __name__ == "__main__":
 
     game.configure_engine(factory, strategy)
 
-    # For Available types and Simulating aggressive turn
-    creature1 = factory.create_creature("dragon")
-    creature2 = factory.create_creature("goblin")
+    dragon = factory.create_creature("dragon")
+    goblin = factory.create_creature("goblin")
     spell1 = factory.create_spell("fireball")
     artifact1 = factory.create_artifact("mana_ring")
     print(f"Available types: {factory.get_supported_types()}")
-
-    creature3 = factory.create_creature("lightning bolt")
-    creatures = [creature1, creature2, creature3]
-
-    # For Turn execution
+    lightning_bolt = factory.create_creature("lightning bolt")
     enemy = factory.create_creature("enemy")
-    hand = [creature2, creature3]
-    battlefield = [enemy]
-    hand_turn = create_hand_turn(hand)
-    battlefield_turn = create_hand_turn(battlefield)
 
     print("\n" + "Simulating aggressive turn...")
+    creatures = [dragon, goblin, lightning_bolt]
     hand = create_hand(creatures)
     print("Hand:", end=" ")
     print(*hand, sep=", ")
 
     print("\n" + "Turn execution:")
     print("Strategy:", strategy.get_strategy_name())
-    turn = strategy.execute_turn(hand_turn, battlefield_turn)
+
+    hand = [goblin, lightning_bolt]
+    battlefield = [enemy]
+    hand_turn = create_hand_turn(hand)
+    battlefield_turn = create_hand_turn(battlefield)
+    ex_turn = strategy.execute_turn(hand_turn, battlefield_turn)
     game.turn += 1
-    print("Action:", turn)
+    game.cards_created += len(creatures)
+    game.total_damage += ex_turn["damage_dealt"]
+
+    print("Action:", ex_turn)
 
     print("\n" + "Game Report:")
-    game.cards_created += len(creatures)
-    game.total_damage += turn["damage_dealt"]
     print(game.get_engine_status())
 
     print("\n" + "Abstract Factory + Strategy Pattern: "
