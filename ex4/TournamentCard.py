@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:42:36 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 17:11:00 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/01 18:40:29 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -28,13 +28,15 @@ class TournamentCard(Card, Combatable, Rankable):
         super().__init__(name, cost, rarity)
         self.win = 0
         self.loose = 0
+        self.total_damage
         self.id_card = id_card
         self.rating = rating
         self.damage = damage
         self.health = health
 
     def get_tournament_stats(self) -> Dict:
-        pass
+        return {"win": self.win, "loose": self.loose,
+                "total damage inflicted": self.total_damage}
 
 # =============================================================================
 # ================================ Card =======================================
@@ -68,6 +70,7 @@ class TournamentCard(Card, Combatable, Rankable):
     def defend(self, incoming_damage: int) -> Dict:
         damage_blocked = 3
         damage_t = incoming_damage - damage_blocked
+        self.total_damage += damage_t
         result = {}
         if (self.health > 0):
             self.health -= damage_t
