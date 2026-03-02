@@ -7,14 +7,13 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:55:59 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/02 09:09:10 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/02 09:09:58 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
 from ex4.TournamentCard import TournamentCard
 from ex4.TournamentPlatform import TournamentPlatform
 from ex0.Card import Rarity
-# from ex0.CreatureCard import CreatureCard
 
 
 def main():

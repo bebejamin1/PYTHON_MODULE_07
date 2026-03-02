@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:42:36 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 18:44:50 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/02 09:10:09 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -16,10 +16,6 @@ from typing import Dict
 from ex0.Card import Card
 from ex2.Combatable import Combatable
 from ex4.Rankable import Rankable
-# • Inherits from Card, Combatable, and Rankable
-# • Implements all abstract methods from all three interfaces
-# • Tracks tournament performance (wins, losses, rating)
-# • Processes tournament matches with ranking updates
 
 
 class TournamentCard(Card, Combatable, Rankable):
