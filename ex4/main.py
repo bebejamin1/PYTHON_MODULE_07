@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/03/01 13:55:59 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/03/01 18:41:14 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/02 09:09:10 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -24,7 +24,7 @@ def main():
     dragon = TournamentCard("dragon_001", "Fire Dragon", 5,
                             Rarity.COMMON.value, 1200, 10, 15)
     wizard = TournamentCard("wizard_001", "Ice Wizard", 5,
-                            Rarity.COMMON.value, 1150, 5, 8)
+                            Rarity.COMMON.value, 1150, 5, 12)
     print(tournament.register_card(dragon) + "\n")
     print(tournament.register_card(wizard) + "\n")
 

@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 13:33:02 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 15:58:47 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/02 09:04:02 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     print(" DataDeck Ability System ".center(79, "="))
 
+    print("\n" + "EliteCard capabilities:")
     print(f"- {Card.__name__}: {[m for m in dir(Card) if m[0] != '_']}")
     print(f"- {Combatable.__name__}: "
           f"{[m for m in dir(Combatable) if m[0] != '_']}")

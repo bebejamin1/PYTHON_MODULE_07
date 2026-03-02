@@ -7,7 +7,7 @@
 #   By: bbeaurai <bbeaurai@student.42lehavre.fr>     +#+  +:+       +#+       #
 #                                                  +#+#+#+#+#+   +#+          #
 #   Created: 2026/02/22 11:33:05 by bbeaurai            #+#    #+#            #
-#   Updated: 2026/02/22 13:31:27 by bbeaurai           ###   ########.fr      #
+#   Updated: 2026/03/02 09:00:23 by bbeaurai           ###   ########.fr      #
 #                                                                             #
 # ########################################################################### #
 
@@ -46,7 +46,8 @@ if __name__ == "__main__":
     res = deck.get_deck_stats()
     print(f"Deck stats: {{'total_cards': '{res['total_cards']}', "
           f"'creatures': '{res['creatures']}', 'spells': '{res['spells']}'\n"
-          f"'artifacts': '{'artifacts'}', 'avg_cost': {'avg_cost'}}}")
+          f"'artifacts': '{res['artifacts']}', "
+          f"'avg_cost': {res['avg_cost']}}}")
 
     # =========================================================================
     # ========================== DRAWING ======================================
